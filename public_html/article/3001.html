@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>洞爷湖</title>
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../static/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/article.css">
+</head>
+
+<body>
+  <!-- header -->
+  <header>
+    <div class="w">
+      <img src="../img/logo.png" alt="什么情况？" class="logoImg">
+      <span class="logo">洞爷湖</span>
+      <span class="wisdomWords">Stay foolish, stay hungry</span>
+    </div>
+  </header>
+
+  <div class="main">
+    <!-- nav-bar -->
+    <nav class="navList">
+      <ul class="navBar">
+        <li class="currentBar">
+          <a href="">
+            <i class="fa fa-home" aria-hidden="true"></i>
+            <span>万事屋</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="fa fa-book" aria-hidden="true"></i>
+            <span>破万卷</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="fa fa-user-plus" aria-hidden="true"></i>
+            <span>觅知音</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="fa fa-handshake-o" aria-hidden="true"></i>
+            <span>寻伯乐</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="fa fa-coffee" aria-hidden="true"></i>
+            <span>知冷暖</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- midContent -->
+    <div class="midContent">
+      <!-- article contents -->
+      <article>
+        <!-- 文章标题 -->
+        <h1>Python内置模块-glob模块详解</h1>
+        <!-- 发表时间、标签 -->
+        <div class="detail">
+          <span>发表时间：2021-06-30</span>
+          <span>Python</span>
+          <span>glob</span>
+          <span>内置模块</span>
+        </div>
+
+        <hr>
+
+        <!-- 文章正文 -->
+        <div class="article-cont">
+          <p>
+            glob模块主要用来查找目录和文件，可以使用<kbd>*</kbd>、<kbd>？</kbd>、<kbd>[]</kbd> 这三种通配符对路径中的文件进行匹配。
+          </p>
+          <p>
+            <ul>
+              <li><kbd>*</kbd>：代表0个或多个字符</li>
+              <li><kbd>？</kbd>：代表一个字符</li>
+              <li><kbd>[]</kbd>：匹配指定范围内的字符，如[0-9]匹配数字</li>
+            </ul>
+          </p>
+          <h3>
+            使用方法
+          </h3>
+          <p>
+            glob模块常用的两个方法有<kbd>glob.glob() </kbd> 和 <kbd>glob.iglob()</kbd> 。
+          </p>
+          <h4>
+            glob.glob()
+          </h4>
+          <p>
+            参数及返回值：def glob(pathname, *, recursive=False):
+            <ul>
+              <li>pathname：该参数是要匹配的路径；</li>
+              <li>recursive：如果是true就会递归的去匹配符合的文件路径，默认是False。</li>
+            </ul>
+          </p>
+          <p>
+            返回匹配到的路径列表。
+          </p>
+          <p>使用实例：</p>
+          <p>测试使用的目录结构：</p>
+          <p>
+            <code>
+              <pre class="code">
+test_dir/
+├── a1.txt
+├── a2.txt
+├── a3.py
+├── sub_dir1
+│ ├── b1.txt
+│ ├── b2.py
+│ └── b3.py
+└── sub_dir2
+├── c1.txt
+├── c2.py
+└── c3.txt
+              </pre>
+            </code>
+          </p>
+          <p>
+            test_dir/的绝对路径为E:\test_dir。
+          </p>
+          <p>
+            <code>
+              <pre class="code">
+# 获取test_dir目录下的所有子目录和文件（不递归，也就是不获取子目录下的孙目录和文件）
+>>> path_list1 = glob.glob('./test_dir/*')
+>>> path_list1
+['./test_dir/a3.py', './test_dir/a2.txt', './test_dir/sub_dir1', './test_dir/sub_dir2', './test_dir/a1.txt']
+
+# 获取test_dir目录下的所有子目录和文件（递归）
+>>> path_list2 = glob.glob('./test_dir/**', recursive=True)
+>>> path_list2
+['./test_dir/', './test_dir/a3.py', './test_dir/a2.txt', './test_dir/sub_dir1', './test_dir/sub_dir1/b2.py',
+'./test_dir/sub_dir1/b3.py', './test_dir/sub_dir1/b1.txt', './test_dir/sub_dir2',
+'./test_dir/sub_dir2/c3.txt', './test_dir/sub_dir2/c1.txt', './test_dir/sub_dir2/c2.py', './test_dir/a1.txt']
+
+# 获取test_dir目录下所有.txt文件（不递归）
+>>> path_list3 = glob.glob('./test_dir/*.txt')
+>>> path_list3
+['a1.txt', 'a2.txt']
+
+# 获取所有子目录下的.py文件
+>>> path_list4 = glob.glob('./test_dir/*/*.py')
+>>> path_list4
+['./test_dir/sub_dir1/b2.py', './test_dir/sub_dir1/b3.py', './test_dir/sub_dir2/c2.py']
+
+# 获取test_dir目录下所有的.py文件（递归）
+>>> path_list5 = glob.glob('./test_dir/**/*.py', recursive=True)
+>>> path_list5
+['./test_dir/a3.py', './test_dir/sub_dir1/b2.py', './test_dir/sub_dir1/b3.py', './test_dir/sub_dir2/c2.py']
+
+# 使用绝对路径
+>>> path_list6 = glob.glob(r'C:\Users\')
+              </pre>
+            </code>
+          </p>
+          <h4>glob.iglob()</h4>
+          <p>
+            参数及返回值：def iglob(pathname, *, recursive=False):
+          </p>
+          <p>
+            <ul>
+              <li>pathname：该参数是要匹配的路径；</li>
+              <li>recursive：如果是true就会递归的去匹配符合的文件路径，默认是False。</li>
+              <li>返回一个迭代器，遍历该迭代器的结果与使用相同参数调用glob()的返回结果一致。</li>
+            </ul>
+          </p>
+          <p>
+            <code>
+              <pre class="code">
+>>> file_path_iter = glob.iglob('./test_dir/*')
+>>> print(type(file))
+<xmp>
+<class 'generator'>
+</xmp>
+>>> for file_path in file_path_iter:
+... print(file_path)
+
+./test_dir/a3.py
+./test_dir/a2.txt
+./test_dir/sub_dir1
+./test_dir/sub_dir2
+./test_dir/a1.txt
+              </pre>
+            </code>
+          </p>
+        </div>
+      </article>
+    </div>
+
+    <!-- right -->
+    <div class="right">
+      <div class="hotAticle">
+        <div class="rankingTitle">
+          <i class="fa fa-thermometer-full fa-lg"></i>
+          <span>笔落若清风</span>
+        </div>
+        <ul class="rankingList">
+          <li><a href=""><span>1</span><span>牛客网的一道排序题</span></a></li>
+          <li><a href=""><span>2</span><span>Python内置模块-glob模块详解</span></a></li>
+          <li><a href=""><span>3</span><span>apply()和call()怎么区分？</span></a></li>
+          <li><a href=""><span>4</span><span>JavaScript递增/递减操作符...</span></a></li>
+          <li><a href=""><span>5</span><span>Flex弹性布局详解</span></a></li>
+        </ul>
+      </div>
+      <div class="canlendar">
+        打算放个日历
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

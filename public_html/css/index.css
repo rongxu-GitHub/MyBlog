@@ -3,9 +3,34 @@
     margin: 0;
 }
 
-html, body {
+h1,
+h2,
+h3,
+h4,
+p,
+span,
+a,
+div,
+li {
+    font-family: SpecialSymbol, DINRegular, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Hiragino Sans GB", "Segoe UI", "Microsoft YaHei", "微软雅黑", sans-serif;
+}
+
+html,
+body {
     background: url(../img/background-image.jpg) no-repeat fixed;
     font-size: 62.5%;
+    letter-spacing: 1px;
+
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
 }
 
 li {
@@ -24,11 +49,12 @@ header {
     height: 6rem;
     line-height: 6rem;
     background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 5px 5px rgba(155, 155, 155, 0.1);
     z-index: 9999;
 }
 
 header .w {
-    width: 91rem;
+    width: 1030px;
     margin: 0 auto;
 }
 
@@ -57,7 +83,7 @@ header .w {
 main style
 */
 .main {
-    width: 93rem;
+    width: 1000px;
     margin: 0 auto;
 }
 
@@ -71,11 +97,12 @@ main style
 .navBar li {
     margin-bottom: 10px;
     padding-left: 40px;
-    width: 120px;
+    width: 160px;
     height: 50px;
     font-size: 1.4rem;
     line-height: 50px;
     color: rgb(0, 136, 245);
+    border-radius: 3px;
 }
 
 .navBar li:hover {
@@ -97,7 +124,7 @@ main style
 
 .navBar .currentBar {
     background: rgb(252, 252, 252);
-    border-radius: 2px;
+    border-radius: 3px;
 }
 
 .navBar .currentBar a {
@@ -110,14 +137,14 @@ main style
 
 /* midContent */
 .midContent {
-    /* display: inline-block; */
+    width: 570px;
     float: left;
     margin-left: 170px;
     margin-top: 70px;
 }
 
 .midContent .slideshow {
-    width: 50rem;
+    width: 570px;
     height: 20rem;
     background: rgb(252, 252, 252);
     border-radius: 2px;
@@ -151,7 +178,6 @@ article {
 article .articleContainer {
     margin-top: 10px;
     padding: 10px;
-    height: 13rem;
     background: rgb(250, 250, 250);
     border-radius: 2px;
 }
@@ -167,13 +193,14 @@ article .articleContainer .articleInfo {
 
 article .articleContainer .img {
     width: 150px;
-    height: 130px;
+    height: 150px;
     vertical-align: top;
     overflow: hidden;
 }
 
 article .articleContainer .img img {
-    width: 100%;
+    width: 150px;
+    /* height: 150px; */
 }
 
 article .articleContainer .articleInfo {
@@ -191,22 +218,21 @@ article .articleContainer .articleInfo h1 {
 
 article .articleContainer .articleInfo p {
     margin-top: 15px;
-    width: 315px;
-    height: 70px;
-    font-size: 1.4rem;
+    width: 370px;
+    height: 90px;
+    font-size: 1.2rem;
+    color: rgb(141, 141, 141);
 }
 
 article .articleContainer .articleInfo .otherInfo {
-    width: 315px;
+    width: 370px;
 }
 
-article .articleContainer .articleInfo .otherInfo img {
-    display: inline-block;
-    width: 15px;
-    height: 100%;
+article .articleContainer .articleInfo .otherInfo .time {
+    float: left;
 }
 
-article .articleContainer .articleInfo .otherInfo .keyword {
+article .articleContainer .articleInfo .otherInfo .tag {
     float: right;
     margin-left: 10px;
     padding: 2px 5px;
@@ -232,19 +258,19 @@ article .articleContainer .articleInfo .otherInfo .keyword {
 
 .power {
     margin: 10px 0;
-    color:rgb(197, 197, 197);
+    color: rgb(197, 197, 197);
     font-size: 1rem;
     text-align: center;
 }
 
 .right {
-    /* display: inline-block; */
-    float: left;
+    float: right;
     margin: 70px 0 0 10px;
     width: 250px;
 }
 
 .right .hotAticle {
+    width: 230px;
     padding: 10px;
     background: rgb(252, 252, 252);
     border-radius: 2px;
@@ -273,14 +299,13 @@ article .articleContainer .articleInfo .otherInfo .keyword {
 }
 
 .right .hotAticle .rankingList li a span {
-    display: inline-block;
-    padding: 0 6px;
     color: rgb(88, 88, 88);
 }
 
 .right .hotAticle .rankingList li a span:first-child {
+    display: inline-block;
     margin-right: 10px;
-    width: 8px;
+    width: 16px;
     background: rgb(197, 197, 197);
     text-align: center;
     border-radius: 2px;
@@ -288,7 +313,7 @@ article .articleContainer .articleInfo .otherInfo .keyword {
 
 .right .canlendar {
     margin-top: 10px;
-    width: 250px;
+    width: 230px;
     height: 200px;
     background: rgb(252, 252, 252);
     border-radius: 2px;

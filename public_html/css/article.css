@@ -1,0 +1,93 @@
+.midContent {
+  box-sizing: border-box;
+  width: 500px;
+  min-height: 500px;
+  padding: 30px;
+  letter-spacing: 1px;
+  background: rgb(252, 252, 252);
+}
+
+.midContent,
+.midContent article,
+.midContent article h1,
+.midContent article h2,
+.midContent article h3,
+.midContent article h4,
+.midContent article .detail,
+.midContent article p,
+.midContent article .code,
+.midContent article kbd,
+.midContent article li {
+  font-family: SpecialSymbol,DINRegular,-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue","Hiragino Sans GB","Segoe UI","Microsoft YaHei","微软雅黑",sans-serif;
+}
+
+.midContent article h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: rgb(85, 85, 85);
+}
+
+.midContent article h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: rgb(85, 85, 85);
+}
+
+.midContent article h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: rgb(85, 85, 85);
+}
+
+.midContent article h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: rgb(85, 85, 85);
+}
+
+.midContent article hr {
+  margin: 5px 0;
+  border: none;
+  background-color: silver;
+  height: 1px;
+}
+
+.midContent article .detail span {
+  margin-right: 10px;
+  padding: 2px 5px;
+  color: rgb(131, 131, 131);
+}
+
+.midContent article p {
+  margin: 20px 0;
+  font-size: 13px;
+  line-height: 24px;
+  color: rgb(85, 85, 85);
+}
+
+.midContent article .code {
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 12px;
+  color: rgb(85, 85, 85);
+  background: rgb(235, 226, 213);
+  border-radius: 5px;
+  overflow: auto;
+  line-height: 20px;
+}
+
+.midContent article kbd {
+  padding: 1px 3px;
+  background: rgb(236, 236, 236);
+  margin: 0 2px;
+  color: rgb(96, 143, 212);
+  border-radius: 6px
+  
+}
+
+.midContent article li {
+  list-style: circle inside;
+  text-indent: 10px;
+  line-height: 20px;
+  color: rgb(85, 85, 85);
+}
