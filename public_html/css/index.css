@@ -43,14 +43,14 @@ header .w {
     font-size: 2.5rem;
     font-weight: 500;
     color: rgb(0, 136, 245);
-    vertical-align: middle;
+    vertical-align: bottom;
 }
 
 .wisdomWords {
     margin-left: 3.5rem;
     font-size: 1.4rem;
     color: rgb(0, 136, 245);
-    vertical-align: middle;
+    vertical-align: bottom;
 }
 
 /* 
@@ -70,10 +70,11 @@ main style
 
 .navBar li {
     margin-bottom: 10px;
-    width: 160px;
+    padding-left: 40px;
+    width: 120px;
     height: 50px;
     font-size: 1.4rem;
-    line-height: 4.5rem;
+    line-height: 50px;
     color: rgb(0, 136, 245);
 }
 
@@ -81,18 +82,11 @@ main style
     background: rgb(252, 252, 252);
 }
 
-.navBar li img {
+.navBar li i {
     margin-right: 10px;
-    margin-left: 20px;
-    width: 15px;
-    vertical-align: middle;
 }
 
 .navBar li a {
-    display: inline-block;
-    width: 160px;
-    height: 50px;
-    vertical-align: middle;
     color: rgb(137, 137, 137);
     font-weight: 700;
 }
@@ -116,7 +110,7 @@ main style
 
 /* midContent */
 .midContent {
-    display: inline-block;
+    /* display: inline-block; */
     float: left;
     margin-left: 170px;
     margin-top: 70px;
@@ -166,28 +160,32 @@ article .articleContainer:hover {
     background: rgb(255, 255, 255);
 }
 
-article .articleContainer img,
+article .articleContainer .img,
 article .articleContainer .articleInfo {
     display: inline-block;
 }
 
-article .articleContainer img {
+article .articleContainer .img {
     width: 150px;
     height: 130px;
     vertical-align: top;
+    overflow: hidden;
+}
+
+article .articleContainer .img img {
+    width: 100%;
 }
 
 article .articleContainer .articleInfo {
     position: relative;
     margin-left: 10px;
-    /* background: rgb(137, 137, 137); */
     color: rgb(88, 88, 88);
     vertical-align: top;
 }
 
 article .articleContainer .articleInfo h1 {
     margin-top: 5px;
-    font-size: 1.8rem;
+    font-size: 16px;
     font-weight: 400;
 }
 
@@ -240,7 +238,7 @@ article .articleContainer .articleInfo .otherInfo .keyword {
 }
 
 .right {
-    display: inline-block;
+    /* display: inline-block; */
     float: left;
     margin: 70px 0 0 10px;
     width: 250px;
@@ -257,10 +255,8 @@ article .articleContainer .articleInfo .otherInfo .keyword {
     border-bottom: 1px solid rgb(238, 238, 238);
 }
 
-.right .hotAticle .rankingTitle img {
-    width: 20px;
-    height: 20px;
-    vertical-align: middle;
+.right .hotAticle .rankingTitle .fa-thermometer-full {
+    color: rgb(0, 136, 245);
 }
 
 .right .hotAticle .rankingTitle span {
