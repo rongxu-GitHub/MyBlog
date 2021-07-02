@@ -3,6 +3,13 @@
     margin: 0;
 }
 
+@font-face {
+    font-family: DINRegular, "Helvetica Neue", "Hiragino Sans GB";
+    src: url(../static/fonts/DIN-Regular.otf),
+        url(../static/fonts/Helvetica-Neue-2.ttf),
+        url(../static/fonts/__HiraginoSansGB-W3.ttf);
+}
+
 h1,
 h2,
 h3,
@@ -20,7 +27,6 @@ body {
     background: url(../img/background-image.jpg) no-repeat fixed;
     font-size: 62.5%;
     letter-spacing: 1px;
-
 }
 
 html {
@@ -143,11 +149,15 @@ main style
     margin-top: 70px;
 }
 
-.midContent .slideshow {
+/* 轮播图样式 */
+.slideshow {
     width: 570px;
-    height: 20rem;
-    background: rgb(252, 252, 252);
-    border-radius: 2px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slide {
+    width: 3000px;
 }
 
 .midContent .moto {
@@ -199,8 +209,8 @@ article .articleContainer .img {
 }
 
 article .articleContainer .img img {
-    width: 150px;
-    /* height: 150px; */
+    /* width: 150px; */
+    height: 150px;
 }
 
 article .articleContainer .articleInfo {
@@ -257,7 +267,7 @@ article .articleContainer .articleInfo .otherInfo .tag {
 }
 
 .power {
-    margin: 10px 0;
+    margin: 50px 0;
     color: rgb(197, 197, 197);
     font-size: 1rem;
     text-align: center;
@@ -270,7 +280,7 @@ article .articleContainer .articleInfo .otherInfo .tag {
 }
 
 .right .hotAticle {
-    width: 230px;
+    width: 250px;
     padding: 10px;
     background: rgb(252, 252, 252);
     border-radius: 2px;
@@ -311,10 +321,87 @@ article .articleContainer .articleInfo .otherInfo .tag {
     border-radius: 2px;
 }
 
-.right .canlendar {
+/* 日历样式 */
+
+.right .calendar {
+    padding: 10px;
+    position: relative;
     margin-top: 10px;
-    width: 230px;
-    height: 200px;
+    width: 250px;
+    height: 350px;
     background: rgb(252, 252, 252);
     border-radius: 2px;
+}
+
+.calendar .title h1 {
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.calendar .title h2 {
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+}
+
+#prev {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+}
+
+#next {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+}
+
+.calendar a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.calendar .body {
+    margin-top: 10px;
+}
+
+.body-list ul {
+    width: 230px;
+    font-family: arial;
+    font-weight: bold;
+    font-size: 12px;
+    /* background-color: #000; */
+}
+
+.body-list ul li {
+    width: 14.28%;
+    height: 36px;
+    line-height: 36px;
+    list-style-type: none;
+    display: block;
+    box-sizing: border-box;
+    float: left;
+    text-align: center;
+}
+
+.lightgrey {
+    color: #a8a8a8;
+    /*浅灰色*/
+}
+
+.darkgrey {
+    color: #565656;
+    /*深灰色*/
+}
+
+.green {
+    color: #6ac13c;
+    /*绿色*/
+}
+
+.greenbox {
+    border: 1px solid #6ac13c;
+    background: #e9f8df;
+    /*浅绿色背景*/
 }

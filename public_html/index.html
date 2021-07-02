@@ -61,8 +61,15 @@
         <div class="midContent">
             <!-- slideshow -->
             <div class="slideshow">
-                这里放轮播图
-                <img src="" alt="">
+                <div class="contain">
+                    <div class="carousel">
+                        <div class="slide">
+                            <img src="./static/img/slide_img/slide1.jpg" alt="">
+                            <img src="./static/img/slide_img/slide2.jpg" alt="">
+                            <img src="./static/img/slide_img/slide3.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="moto">
                 <img src="img/sun.png" alt="">
@@ -95,8 +102,7 @@
                 <a href="">
                     <div class="articleContainer">
                         <div class="img">
-                            <img src="https://ss0.baidu.com/7Po3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/f11f3a292df5e0fef6409b715e6034a85edf7261.jpg"
-                                alt="">
+                            <img src="https://z3.ax1x.com/2021/07/02/RyTU2T.png" alt="">
                         </div>
                         <div class="articleInfo">
                             <h1>JavaScript递增/递减操作符的神秘行为</h1>
@@ -117,8 +123,7 @@
                 <a href="">
                     <div class="articleContainer">
                         <div class="img">
-                            <img src="https://ss0.baidu.com/7Po3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/f11f3a292df5e0fef6409b715e6034a85edf7261.jpg"
-                                alt="">
+                            <img src="https://z3.ax1x.com/2021/07/02/RyTvLQ.png" alt="">
                         </div>
                         <div class="articleInfo">
                             <h1>apply()和call()怎么区分？</h1>
@@ -129,12 +134,9 @@
                                     <span>2021-06-07</span>
                                 </div>
                                 <div class="tag">
-
                                     <span class="keyword">JavaScript</span>
                                     <span class="keyword">函数</span>
                                 </div>
-
-
                             </div>
                         </div>
                     </div>
@@ -142,8 +144,7 @@
                 <a href="">
                     <div class="articleContainer">
                         <div class="img">
-                            <img src="https://ss0.baidu.com/7Po3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/f11f3a292df5e0fef6409b715e6034a85edf7261.jpg"
-                                alt="">
+                            <img src="https://z3.ax1x.com/2021/07/02/Ry7noR.png" alt="">
                         </div>
                         <div class="articleInfo">
                             <h1>函数声明的方法有几种？</h1>
@@ -157,8 +158,6 @@
                                     <span class="keyword">JavaScript</span>
                                     <span class="keyword">函数声明</span>
                                 </div>
-
-
                             </div>
                         </div>
                     </div>
@@ -166,8 +165,7 @@
                 <a href="">
                     <div class="articleContainer">
                         <div class="img">
-                            <img src="https://ss0.baidu.com/7Po3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/f11f3a292df5e0fef6409b715e6034a85edf7261.jpg"
-                                alt="">
+                            <img src="https://z3.ax1x.com/2021/07/02/Ry7NTA.png" alt="">
                         </div>
                         <div class="articleInfo">
                             <h1>牛客网的一道排序题</h1>
@@ -188,8 +186,7 @@
                 <a href="">
                     <div class="articleContainer">
                         <div class="img">
-                            <img src="https://ss0.baidu.com/7Po3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/f11f3a292df5e0fef6409b715e6034a85edf7261.jpg"
-                                alt="">
+                            <img src="https://z3.ax1x.com/2021/07/02/Ry77m4.png" alt="">
                         </div>
                         <div class="articleInfo">
                             <h1>Python内置模块-glob模块详解</h1>
@@ -236,11 +233,39 @@
                     <li><a href=""><span>5</span><span>Flex弹性布局详解</span></a></li>
                 </ul>
             </div>
-            <div class="canlendar">
-                打算放个日历
+            <!-- 日历部分 -->
+            <div class="calendar">
+                <!-- 日历标题 -->
+                <div class="title">
+                    <h1 class="green" id="calendar-title">Month</h1>
+                    <h2 class="green small" id="calendar-year">Year</h2>
+                    <a href="" id="prev">&lt;</a>
+                    <a href="" id="next">&gt;</a>
+                  </div>
+                  <!-- 日历主体 -->
+                  <div class="body">
+                    <!-- 星期标题 -->
+                    <div class="lightgrey body-list">
+                      <ul>
+                        <li>一</li>
+                        <li>二</li>
+                        <li>三</li>
+                        <li>四</li>
+                        <li>五</li>
+                        <li>六</li>
+                        <li>七</li>
+                      </ul>
+                    </div>
+                    <!-- 日历每一天 -->
+                    <div class="darkgrey body-list">
+                      <ul id="days">
+                      </ul>
+                    </div>
+                  </div>
             </div>
         </div>
     </div>
+    <script src="./js/canlendar.js"></script>
 </body>
 
 </html>
