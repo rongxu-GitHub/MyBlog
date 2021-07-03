@@ -1,6 +1,7 @@
 .midContent {
+  margin-bottom: 20px;
   box-sizing: border-box;
-  width: 500px;
+  width: 570px;
   min-height: 500px;
   padding: 30px;
   letter-spacing: 1px;
@@ -23,25 +24,26 @@
 
 .midContent article h1 {
   font-size: 24px;
-  margin-bottom: 10px;
+  margin: 20px 0;
   color: rgb(85, 85, 85);
 }
 
 .midContent article h2 {
-  font-size: 22px;
-  margin-bottom: 10px;
+  font-size: 20px;
+  margin: 20px 0;
   color: rgb(85, 85, 85);
 }
 
 .midContent article h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
+  font-size: 16px;
+  margin: 20px 0;
   color: rgb(85, 85, 85);
 }
 
 .midContent article h4 {
-  font-size: 18px;
-  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  margin: 20px 0;
   color: rgb(85, 85, 85);
 }
 
@@ -85,9 +87,19 @@
   
 }
 
+.midContent article ul {
+  margin: 20px 0;
+}
+
 .midContent article li {
+  margin: 10px 0;
   list-style: circle inside;
   text-indent: 10px;
-  line-height: 20px;
+  line-height: 25px;
   color: rgb(85, 85, 85);
+}
+
+.article-cont img {
+  width: 100%;
+  margin: 20px 0;
 }

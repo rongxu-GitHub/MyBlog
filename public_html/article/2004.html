@@ -63,133 +63,143 @@
       <!-- article contents -->
       <article>
         <!-- 文章标题 -->
-        <h1>Python内置模块-glob模块详解</h1>
+        <h1>JavaScript递增/递减操作符的神秘行为</h1>
         <!-- 发表时间、标签 -->
         <div class="detail">
-          <span>发表时间：2021-06-30</span>
-          <span>Python</span>
-          <span>glob</span>
-          <span>内置模块</span>
+          <span>2021-06-01</span>
+          <span>JavaScript</span>
+          <span>操作符</span>
         </div>
 
         <hr>
 
         <!-- 文章正文 -->
         <div class="article-cont">
-          <p>
-            glob模块主要用来查找目录和文件，可以使用<kbd>*</kbd>、<kbd>？</kbd>、<kbd>[]</kbd> 这三种通配符对路径中的文件进行匹配。
-          </p>
-          <p>
-            <ul>
-              <li><kbd>*</kbd>：代表0个或多个字符</li>
-              <li><kbd>？</kbd>：代表一个字符</li>
-              <li><kbd>[]</kbd>：匹配指定范围内的字符，如[0-9]匹配数字</li>
-            </ul>
-          </p>
-          <h3>
-            使用方法
-          </h3>
-          <p>
-            glob模块常用的两个方法有<kbd>glob.glob() </kbd> 和 <kbd>glob.iglob()</kbd> 。
-          </p>
-          <h4>
-            glob.glob()
-          </h4>
-          <p>
-            参数及返回值：def glob(pathname, *, recursive=False):
-            <ul>
-              <li>pathname：该参数是要匹配的路径；</li>
-              <li>recursive：如果是true就会递归的去匹配符合的文件路径，默认是False。</li>
-            </ul>
-          </p>
-          <p>
-            返回匹配到的路径列表。
-          </p>
-          <p>使用实例：</p>
-          <p>测试使用的目录结构：</p>
+          <p>递增/递减操作符有两个版本：操作在前和操作在后。</p>
+          <p>先来看一个例子：</p>
           <p>
             <code>
               <pre class="code">
-test_dir/
-├── a1.txt
-├── a2.txt
-├── a3.py
-├── sub_dir1
-│ ├── b1.txt
-│ ├── b2.py
-│ └── b3.py
-└── sub_dir2
-├── c1.txt
-├── c2.py
-└── c3.txt
+let a = 29;
+++a; 
+console.log(a); // 30
+
+let b = 29;
+b++； 
+console.log(b); // 30 
               </pre>
             </code>
           </p>
           <p>
-            test_dir/的绝对路径为E:\test_dir。
+            两个操作都使a和b的值变成30，但是，这样看起来似乎前置操作符和后置操作符的结果是一样的，再来看这样一个例子：
           </p>
           <p>
             <code>
               <pre class="code">
-# 获取test_dir目录下的所有子目录和文件（不递归，也就是不获取子目录下的孙目录和文件）
->>> path_list1 = glob.glob('./test_dir/*')
->>> path_list1
-['./test_dir/a3.py', './test_dir/a2.txt', './test_dir/sub_dir1', './test_dir/sub_dir2', './test_dir/a1.txt']
+// 前置操作符
+let num1 = 2;
+let num2 = 20;
+let num3 = --num1 + num2;
+let num4 = num1 + num2;
+console.log(num3); // 21
+console.log(num4); // 21
 
-# 获取test_dir目录下的所有子目录和文件（递归）
->>> path_list2 = glob.glob('./test_dir/**', recursive=True)
->>> path_list2
-['./test_dir/', './test_dir/a3.py', './test_dir/a2.txt', './test_dir/sub_dir1', './test_dir/sub_dir1/b2.py',
-'./test_dir/sub_dir1/b3.py', './test_dir/sub_dir1/b1.txt', './test_dir/sub_dir2',
-'./test_dir/sub_dir2/c3.txt', './test_dir/sub_dir2/c1.txt', './test_dir/sub_dir2/c2.py', './test_dir/a1.txt']
-
-# 获取test_dir目录下所有.txt文件（不递归）
->>> path_list3 = glob.glob('./test_dir/*.txt')
->>> path_list3
-['a1.txt', 'a2.txt']
-
-# 获取所有子目录下的.py文件
->>> path_list4 = glob.glob('./test_dir/*/*.py')
->>> path_list4
-['./test_dir/sub_dir1/b2.py', './test_dir/sub_dir1/b3.py', './test_dir/sub_dir2/c2.py']
-
-# 获取test_dir目录下所有的.py文件（递归）
->>> path_list5 = glob.glob('./test_dir/**/*.py', recursive=True)
->>> path_list5
-['./test_dir/a3.py', './test_dir/sub_dir1/b2.py', './test_dir/sub_dir1/b3.py', './test_dir/sub_dir2/c2.py']
-
-# 使用绝对路径
->>> path_list6 = glob.glob(r'C:\Users\')
+// 后置操作符
+let num1 = 2;
+let num2 = 20;
+let num3 = num1-- + num2;
+let num4 = num1 + num2;
+console.log(num3); // 22
+console.log(num4); // 21
               </pre>
             </code>
           </p>
-          <h4>glob.iglob()</h4>
           <p>
-            参数及返回值：def iglob(pathname, *, recursive=False):
+            在前置操作符中，num3在计算时num1的取值是1，在后置操作符中，num3在计算时num1的取值是2，这说明：
           </p>
           <p>
-            <ul>
-              <li>pathname：该参数是要匹配的路径；</li>
-              <li>recursive：如果是true就会递归的去匹配符合的文件路径，默认是False。</li>
-              <li>返回一个迭代器，遍历该迭代器的结果与使用相同参数调用glob()的返回结果一致。</li>
-            </ul>
+            在与其他计算混合时，前置操作符会取计算后的值参与运算，后置操作符会取原值参与运算，最后在将使用递增/递减操作符的变量重新计算赋值。
+          </p>
+          <p>
+            递增/递减操作符不仅可以计算数字类型的数据，对于其他数据类型也可以计算，具体规则如下：
+          </p>
+          <p>字符串</p>
+          <p>
+            <code>
+              <pre class="code">
+let s1 = "2";
+s1++; // 值变成3，类型为数字
+
+let s2 = "a";
+s2++; //  值变成NaN，类型为数字
+              </pre>
+            </code>
+          </p>
+          <p>布尔值</p>
+          <p>
+            <code>
+              <pre class="code">
+let b = false;
+b++; // false会转变成0，再参与运算，最终结果为1
+
+let c = true;
+c++; // true会转变成1，再参与运算，最终结果为2
+              </pre>
+            </code>
           </p>
           <p>
             <code>
               <pre class="code">
->>> file_path_iter = glob.iglob('./test_dir/*')
->>> print(type(file))
-<xmp>
-<class 'generator'>
-</xmp>
->>> for file_path in file_path_iter:
-... print(file_path)
+let b = false;
+b++; // false会转变成0，再参与运算，最终结果为1
 
-./test_dir/a3.py
-./test_dir/a2.txt
-./test_dir/sub_dir1
-./test_dir/sub_dir2
-./test_dir/a1.txt
+let c = true;
+c++; // true会转变成1，再参与运算，最终结果为2
+              </pre>
+            </code>
+          </p>
+          <p>
+            <code>
+              <pre class="code">
+let b = false;
+b++; // false会转变成0，再参与运算，最终结果为1
+
+let c = true;
+c++; // true会转变成1，再参与运算，最终结果为2
+              </pre>
+            </code>
+          </p>
+          <p>
+            <code>
+              <pre class="code">
+let b = false;
+b++; // false会转变成0，再参与运算，最终结果为1
+
+let c = true;
+c++; // true会转变成1，再参与运算，最终结果为2
+              </pre>
+            </code>
+          </p>
+          <p>浮点值</p>
+          <p>
+            <code>
+              <pre class="code">
+let f = 1.1;
+f--; // 值变成 0.10000000000000009（因为浮点数不精确）
+              </pre>
+            </code>
+          </p>
+          <p>对象</p>
+          <p>
+            <code>
+              <pre class="code">
+let o = {
+  valueOf() {
+    return -1;
+  }
+};
+o--; // 值变成-2 
+// 应用给对象时，操作符通常会调用 valueOf()和/或 toString()方法来取得可以计算的值。 
               </pre>
             </code>
           </p>

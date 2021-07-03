@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>洞爷湖</title>
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../static/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/article.css">
+</head>
+
+<body>
+  <!-- header -->
+  <header>
+    <div class="w">
+      <img src="../img/logo.png" alt="什么情况？" class="logoImg">
+      <span class="logo">洞爷湖</span>
+      <span class="wisdomWords">Stay foolish, stay hungry</span>
+    </div>
+  </header>
+
+  <div class="main">
+    <!-- nav-bar -->
+    <nav class="navList">
+      <ul class="navBar">
+        <li class="currentBar">
+          <a href="">
+            <i class="fa fa-home" aria-hidden="true"></i>
+            <span>万事屋</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="fa fa-book" aria-hidden="true"></i>
+            <span>破万卷</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="fa fa-user-plus" aria-hidden="true"></i>
+            <span>觅知音</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="fa fa-handshake-o" aria-hidden="true"></i>
+            <span>寻伯乐</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="fa fa-coffee" aria-hidden="true"></i>
+            <span>知冷暖</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- midContent -->
+    <div class="midContent">
+      <!-- article contents -->
+      <article>
+        <!-- 文章标题 -->
+        <h1>Flex弹性布局</h1>
+        <!-- 发表时间、标签 -->
+        <div class="detail">
+          <!-- 发表时间 -->
+          <span>2021-06-17</span>
+          <!-- 关键词 -->
+          <span>CSS</span>
+          <span>flex</span>
+          <span>布局</span>
+        </div>
+
+        <hr>
+
+        <!-- 文章正文 -->
+        <div class="article-cont">
+          <h2>什么是弹性布局</h2>
+          <p>
+            CSS传统布局中，通常需要清楚的计算每个元素的大小和定位，而弹性布局不需要，它会自动计算每个子元素所占的大小和排列。
+          </p>
+          <h2>如何指定弹性布局</h2>
+          <p>给父容器添加如下代码：</p>
+          <p>
+            <code>
+              <pre class="code">
+.box{
+  display: -webkit-flex; /* 如果是Webkit内核的浏览器必须添加此句，比如Safari */
+  display: flex;
+}
+              </pre>
+            </code>
+          </p>
+          <h2>弹性盒子的结构</h2>
+          <ul>
+            <li>容器（flex container）：采用 Flex 布局的元素</li>
+            <li>项目（flex item）：所有子元素</li>
+            <li>主轴（main axis</li>
+            <li>交叉轴（cross axis）：垂直于主轴</li>
+          </ul>
+          <h2>容器的6大属性</h2>
+          <h3>flex-direction</h3>
+          <p>
+            <code>
+              <pre class="code">
+.box {
+  flex-direction: row | row-reverse | column | column-reverse;
+}
+              </pre>
+            </code>
+          </p>
+          <p>
+            指定主轴的方向，有4类可选。
+          </p>
+          <img src="https://www.hualigs.cn/image/60caf322535c7.jpg" alt="">
+          <h3>flex-wrap</h3>
+          <p>
+            如果一条轴线排不下，如何换行。
+          </p>
+          p>
+          <code>
+            <pre class="code">
+.box{
+  flex-wrap: nowrap | wrap | wrap-reverse;
+}
+              </pre>
+          </code>
+          </p>
+          <ul>
+            <li>nowrap：不换行，默认值。</li>
+            <li>wrap：换行。</li>
+            <li>wrap-reverse：换行，第一行在下面。</li>
+          </ul>
+          <img src="https://www.hualigs.cn/image/60caf45e0ff2d.jpg" alt="">
+          <h3>flex-flow</h3>
+          <p>
+            <kbd>flex-direction</kbd> 属性和<kbd>flex-wrap</kbd> 属性的简写形式，默认值为<kbd>row nowrap</kbd> 。
+          </p>
+          <h3>justify-content</h3>
+          <p>项目在主轴上的对齐方式。</p>
+          </p>
+          <p>
+            <code>
+              <pre class="code">
+.box {
+  justify-content: flex-start | flex-end | center | space-between | space-around;
+}
+            </pre>
+            </code>
+          </p>
+          <p>假设主轴为从左到右：</p>
+          <ul>
+            <li><kbd>flex-start</kbd> （默认值）：左对齐</li>
+            <li><kbd>flex-end</kbd> ：右对齐</li>
+            <li><kbd>center</kbd>： 居中</li>
+            <li><kbd>space-between</kbd>：两端对齐，项目之间的间隔都相等。</li>
+            <li><kbd>space-around</kbd>：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。</li>
+          </ul>
+          <img src="https://www.hualigs.cn/image/60caf5467b417.jpg" alt="">
+          <h3>align-items</h3>
+          <p>项目在交叉轴上如何对齐。</p>
+          <p>
+            <code>
+              <pre class="code">
+.box {
+  align-items: flex-start | flex-end | center | baseline | stretch;
+}
+            </pre>
+            </code>
+          </p>
+          <p>假设交叉轴从上到下：</p>
+          <ul>
+            <li>flex-start：交叉轴的起点对齐。</li>
+            <li>flex-end：交叉轴的终点对齐。</li>
+            <li>center：交叉轴的中点对齐。</li>
+            <li>baseline: 项目的第一行文字的基线对齐。</li>
+            <li>stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。</li>
+          </ul>
+          <img src="https://www.hualigs.cn/image/60caf5c8207e1.jpg" alt="">
+          <h3>align-content</h3>
+          <p>多根轴线的对齐方式。</p>
+          <p>
+            <code>
+              <pre class="code">
+.box {
+align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+}
+              </pre>
+            </code>
+          </p>
+          <img src="https://www.hualigs.cn/image/60caf86f139f0.jpg" alt="">
+          <ul>
+            <li>flex-start：与交叉轴的起点对齐。</li>
+            <li>flex-end：与交叉轴的终点对齐。</li>
+            <li>center：与交叉轴的中点对齐。</li>
+            <li>space-between：与交叉轴两端对齐，轴线之间的间隔平均分布。</li>
+            <li>space-around：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。</li>
+            <li>stretch（默认值）：轴线占满整个交叉轴。</li>
+          </ul>
+          <h2>项目的属性</h2>
+          <h3>order</h3>
+          <p>项目的排列顺序。数值越小，排列越靠前，默认为0。</p>
+          <p>
+            <code>
+              <pre class="code">
+.item {
+order: &lt;integer&gt;;
+}
+              </pre>
+            </code>
+          </p>
+          <h3>flex-grow</h3>
+          <p>定义项目的放大比例，默认为`0`，不放大。</p>
+          <p>
+            <code>
+              <pre class="code">
+.item {
+flex-grow: &lt;number&gt;; /* default 0 */
+}
+              </pre>
+            </code>
+          </p>
+          <h3>flex-shrink</h3>
+          <p>项目的缩小比例，默认为1，不缩小。</p>
+          <p>
+            <code>
+              <pre class="code">
+.item {
+flex-shrink: &lt;number&gt;; /* default 1 */
+}
+              </pre>
+            </code>
+          </p>
+          <h3>flex-basis</h3>
+          <p>在分配多余空间之前，项目占据的主轴空间（main size）。</p>
+          <p>
+            <code>
+              <pre class="code">
+.item {
+flex-basis: &lt;length&gt; | auto; /* default auto */
+}
+              </pre>
+            </code>
+          </p>
+          <h3>flex</h3>
+          <p>`flex-grow`, `flex-shrink` 和 `flex-basis`的简写，默认值为`0 1 auto`。</p>
+          <p>
+            <code>
+              <pre class="code">
+.item {
+flex: none | [ &lt;flex-grow&gt; &lt;flex-shrink&gt;? || &lt;flex-basis&gt; ]
+}
+              </pre>
+            </code>
+          </p>
+          <h3>align-self</h3>
+          <p>允许单个项目有与其他项目不一样的对齐方式，可覆盖<kbd>align-items</kbd> 属性。</p>
+          <p>
+            <code>
+              <pre class="code">
+.item {
+align-self: auto | flex-start | flex-end | center | baseline | stretch;
+}
+              </pre>
+            </code>
+          </p>
+        </div>
+      </article>
+    </div>
+
+    <!-- right -->
+    <div class="right">
+      <div class="hotAticle">
+        <div class="rankingTitle">
+          <i class="fa fa-thermometer-full fa-lg"></i>
+          <span>笔落若清风</span>
+        </div>
+        <ul class="rankingList">
+          <li><a href=""><span>1</span><span>牛客网的一道排序题</span></a></li>
+          <li><a href="../article/3001.html"><span>2</span><span>Python内置模块-glob模块详解</span></a></li>
+          <li><a href=""><span>3</span><span>apply()和call()怎么区分？</span></a></li>
+          <li><a href=""><span>4</span><span>JavaScript递增/递减操作符...</span></a></li>
+          <li><a href=""><span>5</span><span>Flex弹性布局详解</span></a></li>
+        </ul>
+      </div>
+      <div class="calendar">
+        <!-- 日历标题 -->
+        <div class="title">
+          <h1 class="green" id="calendar-title">Month</h1>
+          <h2 class="green small" id="calendar-year">Year</h2>
+          <a href="" id="prev">&lt;</a>
+          <a href="" id="next">&gt;</a>
+        </div>
+        <!-- 日历主体 -->
+        <div class="body">
+          <!-- 星期标题 -->
+          <div class="lightgrey body-list">
+            <ul>
+              <li>一</li>
+              <li>二</li>
+              <li>三</li>
+              <li>四</li>
+              <li>五</li>
+              <li>六</li>
+              <li>七</li>
+            </ul>
+          </div>
+          <!-- 日历每一天 -->
+          <div class="darkgrey body-list">
+            <ul id="days">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../js/canlendar.js"></script>
+</body>
+
+</html>
