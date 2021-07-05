@@ -1,13 +1,13 @@
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 @font-face {
-    font-family: DINRegular, "Helvetica Neue", "Hiragino Sans GB";
-    src: url(../static/fonts/DIN-Regular.otf),
-        url(../static/fonts/Helvetica-Neue-2.ttf),
-        url(../static/fonts/__HiraginoSansGB-W3.ttf);
+  font-family: DINRegular, "Helvetica Neue", "Hiragino Sans GB";
+  src: url(../static/fonts/DIN-Regular.otf),
+    url(../static/fonts/Helvetica-Neue-2.ttf),
+    url(../static/fonts/__HiraginoSansGB-W3.ttf);
 }
 
 h1,
@@ -19,389 +19,398 @@ span,
 a,
 div,
 li {
-    font-family: SpecialSymbol, DINRegular, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Hiragino Sans GB", "Segoe UI", "Microsoft YaHei", "微软雅黑", sans-serif;
+  font-family: SpecialSymbol, DINRegular, -apple-system, BlinkMacSystemFont,
+    "PingFang SC", "Helvetica Neue", "Hiragino Sans GB", "Segoe UI",
+    "Microsoft YaHei", "微软雅黑", sans-serif;
 }
 
 html,
 body {
-    background: url(../img/background-image.jpg) no-repeat fixed;
-    font-size: 62.5%;
-    letter-spacing: 1px;
+  background: url(../img/background-image.jpg) no-repeat fixed;
+  font-size: 62.5%;
+  letter-spacing: 1px;
 }
 
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 6rem;
-    line-height: 6rem;
-    background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 5px 5px rgba(155, 155, 155, 0.1);
-    z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6rem;
+  line-height: 6rem;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 5px 5px rgba(155, 155, 155, 0.1);
+  z-index: 9999;
 }
 
 header .w {
-    width: 1030px;
-    margin: 0 auto;
+  width: 1030px;
+  margin: 0 auto;
 }
 
 .w .logoImg {
-    width: 50px;
-    height: 100%;
-    vertical-align: middle;
+  width: 50px;
+  height: 100%;
+  vertical-align: middle;
 }
 
 .logo {
-    margin-left: 1rem;
-    font-size: 2.5rem;
-    font-weight: 500;
-    color: rgb(0, 136, 245);
-    vertical-align: bottom;
+  margin-left: 1rem;
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: rgb(0, 136, 245);
+  vertical-align: bottom;
 }
 
 .wisdomWords {
-    margin-left: 3.5rem;
-    font-size: 1.4rem;
-    color: rgb(0, 136, 245);
-    vertical-align: bottom;
+  margin-left: 3.5rem;
+  font-size: 1.4rem;
+  color: rgb(0, 136, 245);
+  vertical-align: bottom;
 }
 
 /* 
 main style
 */
 .main {
-    width: 1000px;
-    margin: 0 auto;
+  width: 1000px;
+  margin: 0 auto;
 }
 
 .navList {
-    /* float: left; */
-    display: inline-block;
-    position: fixed;
-    top: 70px;
+  /* float: left; */
+  display: inline-block;
+  position: fixed;
+  top: 70px;
 }
 
 .navBar li {
-    margin-bottom: 10px;
-    padding-left: 40px;
-    width: 160px;
-    height: 50px;
-    font-size: 1.4rem;
-    line-height: 50px;
-    color: rgb(0, 136, 245);
-    border-radius: 3px;
+  margin-bottom: 10px;
+  padding-left: 40px;
+  width: 160px;
+  height: 50px;
+  font-size: 1.4rem;
+  line-height: 50px;
+  color: rgb(0, 136, 245);
+  border-radius: 3px;
 }
 
 .navBar li:hover {
-    background: rgb(252, 252, 252);
+  background: rgb(252, 252, 252);
 }
 
 .navBar li i {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .navBar li a {
-    color: rgb(137, 137, 137);
-    font-weight: 700;
+  color: rgb(137, 137, 137);
+  font-weight: 700;
 }
 
 .navBar li a:hover {
-    color: rgb(0, 136, 245);
+  color: rgb(0, 136, 245);
 }
 
 .navBar .currentBar {
-    background: rgb(252, 252, 252);
-    border-radius: 3px;
+  background: rgb(252, 252, 252);
+  border-radius: 3px;
 }
 
 .navBar .currentBar a {
-    color: rgb(0, 136, 245);
+  color: rgb(0, 136, 245);
 }
 
 .navBar li a span {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 /* midContent */
 .midContent {
-    width: 570px;
-    float: left;
-    margin-left: 170px;
-    margin-top: 70px;
+  width: 570px;
+  float: left;
+  margin-left: 170px;
+  margin-top: 70px;
 }
 
 /* 轮播图样式 */
 .slideshow {
-    width: 570px;
-    height: 100%;
-    overflow: hidden;
+  width: 570px;
+  height: 100%;
+  overflow: hidden;
 }
 
 .slide {
-    width: 3000px;
+  width: 3000px;
 }
 
 .midContent .moto {
-    margin-top: 10px;
-    padding-left: 15px;
-    height: 4rem;
-    background: rgb(252, 252, 252);
-    border-radius: 2px;
-    line-height: 4rem;
+  margin-top: 10px;
+  padding-left: 15px;
+  height: 4rem;
+  background: rgb(252, 252, 252);
+  border-radius: 2px;
+  line-height: 4rem;
 }
 
 .midContent .moto img {
-    width: 15px;
-    vertical-align: middle;
+  width: 15px;
+  vertical-align: middle;
 }
 
 .midContent .moto span {
-    margin-left: 10px;
-    vertical-align: middle;
-    font-size: 1.4rem;
-    color: rgb(100, 100, 100);
+  margin-left: 10px;
+  vertical-align: middle;
+  font-size: 1.4rem;
+  color: rgb(100, 100, 100);
 }
 
 article {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 article .articleContainer {
-    margin-top: 10px;
-    padding: 10px;
-    background: rgb(250, 250, 250);
-    border-radius: 2px;
+  margin-top: 10px;
+  padding: 10px;
+  background: rgb(250, 250, 250);
+  border-radius: 2px;
 }
 
 article .articleContainer:hover {
-    background: rgb(255, 255, 255);
+  background: rgb(255, 255, 255);
 }
 
 article .articleContainer .img,
 article .articleContainer .articleInfo {
-    display: inline-block;
+  display: inline-block;
 }
 
 article .articleContainer .img {
-    width: 150px;
-    height: 150px;
-    vertical-align: top;
-    overflow: hidden;
+  width: 150px;
+  height: 150px;
+  vertical-align: top;
+  overflow: hidden;
 }
 
 article .articleContainer .img img {
-    /* width: 150px; */
-    height: 150px;
+  /* width: 150px; */
+  height: 150px;
 }
 
 article .articleContainer .articleInfo {
-    position: relative;
-    margin-left: 10px;
-    color: rgb(88, 88, 88);
-    vertical-align: top;
+  position: relative;
+  margin-left: 10px;
+  color: rgb(88, 88, 88);
+  vertical-align: top;
 }
 
 article .articleContainer .articleInfo h1 {
-    margin-top: 5px;
-    font-size: 16px;
-    font-weight: 400;
+  margin-top: 5px;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 article .articleContainer .articleInfo p {
-    margin-top: 15px;
-    width: 370px;
-    height: 90px;
-    font-size: 1.2rem;
-    color: rgb(141, 141, 141);
+  margin-top: 15px;
+  width: 370px;
+  height: 90px;
+  font-size: 1.2rem;
+  color: rgb(141, 141, 141);
 }
 
 article .articleContainer .articleInfo .otherInfo {
-    width: 370px;
+  width: 370px;
 }
 
 article .articleContainer .articleInfo .otherInfo .time {
-    float: left;
+  float: left;
 }
 
 article .articleContainer .articleInfo .otherInfo .tag {
-    float: right;
-    margin-left: 10px;
-    padding: 2px 5px;
-    background: rgb(197, 197, 197);
-    border-radius: 5px;
+  float: right;
+  margin-left: 10px;
+  padding: 2px 5px;
+  background: rgb(197, 197, 197);
+  border-radius: 5px;
 }
 
 .pageNumber {
-    margin-top: 10px;
-    padding: 10px 0;
-    text-align: center;
+  margin-top: 10px;
+  padding: 10px 0;
+  text-align: center;
 }
 
 .pageNumber span {
-    display: inline-block;
-    margin: 0 10px;
-    padding: 0 3px;
-    width: 15px;
-    background: rgb(252, 252, 252);
-    color: rgb(100, 100, 100);
-    font-size: 1.4rem;
+  display: inline-block;
+  margin: 0 10px;
+  padding: 0 3px;
+  width: 15px;
+  background: rgb(252, 252, 252);
+  color: rgb(100, 100, 100);
+  font-size: 1.4rem;
 }
 
 .power {
-    margin: 50px 0;
-    color: rgb(197, 197, 197);
-    font-size: 1rem;
-    text-align: center;
+  margin: 50px 0;
+  color: rgb(197, 197, 197);
+  font-size: 1rem;
+  text-align: center;
 }
 
 .right {
-    float: right;
-    margin: 70px 0 0 10px;
-    width: 250px;
+  float: right;
+  margin: 70px 0 0 10px;
+  width: 250px;
 }
 
 .right .hotAticle {
-    width: 250px;
-    padding: 10px;
-    background: rgb(252, 252, 252);
-    border-radius: 2px;
+  width: 250px;
+  padding: 10px;
+  background: rgb(252, 252, 252);
+  border-radius: 2px;
 }
 
 .right .hotAticle .rankingTitle {
-    padding: 10px 0;
-    border-bottom: 1px solid rgb(238, 238, 238);
+  padding: 10px 0;
+  border-bottom: 1px solid rgb(238, 238, 238);
 }
 
 .right .hotAticle .rankingTitle .fa-thermometer-full {
-    color: rgb(0, 136, 245);
+  color: rgb(0, 136, 245);
 }
 
 .right .hotAticle .rankingTitle span {
-    margin-left: 10px;
-    color: rgb(0, 136, 245);
-    font-size: 1.4rem;
-    font-weight: 700;
-    vertical-align: middle;
+  margin-left: 10px;
+  color: rgb(0, 136, 245);
+  font-size: 1.4rem;
+  font-weight: 700;
+  vertical-align: middle;
+}
+
+.right .hotAticle .rankingList {
+  
 }
 
 .right .hotAticle .rankingList li {
-    margin-top: 10px;
-    font-size: 1.2rem;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .right .hotAticle .rankingList li a span {
-    color: rgb(88, 88, 88);
+  color: rgb(88, 88, 88);
 }
 
 .right .hotAticle .rankingList li a span:first-child {
-    display: inline-block;
-    margin-right: 10px;
-    width: 16px;
-    background: rgb(197, 197, 197);
-    text-align: center;
-    border-radius: 2px;
+  display: inline-block;
+  margin-right: 10px;
+  width: 16px;
+  background: rgb(197, 197, 197);
+  text-align: center;
+  border-radius: 2px;
 }
 
 /* 日历样式 */
 
 .right .calendar {
-    padding: 10px;
-    position: relative;
-    margin-top: 10px;
-    width: 250px;
-    height: 350px;
-    background: rgb(252, 252, 252);
-    border-radius: 2px;
+  padding: 10px;
+  position: relative;
+  margin-top: 10px;
+  width: 250px;
+  height: 350px;
+  background: rgb(252, 252, 252);
+  border-radius: 2px;
 }
 
 .calendar .title h1 {
-    font-size: 20px;
-    line-height: 30px;
-    text-align: center;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
 }
 
 .calendar .title h2 {
-    font-size: 14px;
-    line-height: 20px;
-    text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
 }
 
 #prev {
-    position: absolute;
-    top: 30px;
-    left: 20px;
+  position: absolute;
+  top: 30px;
+  left: 20px;
 }
 
 #next {
-    position: absolute;
-    top: 30px;
-    right: 20px;
+  position: absolute;
+  top: 30px;
+  right: 20px;
 }
 
 .calendar a {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
+  text-decoration: none;
+  color: rgb(0, 0, 0);
 }
 
 .calendar .body {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .body-list ul {
-    width: 230px;
-    font-family: arial;
-    font-weight: bold;
-    font-size: 12px;
-    /* background-color: #000; */
+  width: 230px;
+  font-family: arial;
+  font-weight: bold;
+  font-size: 12px;
+  /* background-color: #000; */
 }
 
 .body-list ul li {
-    width: 14.28%;
-    height: 36px;
-    line-height: 36px;
-    list-style-type: none;
-    display: block;
-    box-sizing: border-box;
-    float: left;
-    text-align: center;
+  width: 14.28%;
+  height: 36px;
+  line-height: 36px;
+  list-style-type: none;
+  display: block;
+  box-sizing: border-box;
+  float: left;
+  text-align: center;
 }
 
 .lightgrey {
-    color: #a8a8a8;
-    /*浅灰色*/
+  color: #a8a8a8;
+  /*浅灰色*/
 }
 
 .darkgrey {
-    color: #565656;
-    /*深灰色*/
+  color: #565656;
+  /*深灰色*/
 }
 
 .green {
-    color: #6ac13c;
-    /*绿色*/
+  color: #6ac13c;
+  /*绿色*/
 }
 
 .greenbox {
-    border: 1px solid #6ac13c;
-    background: #e9f8df;
-    /*浅绿色背景*/
+  border: 1px solid #6ac13c;
+  background: #e9f8df;
+  /*浅绿色背景*/
 }
